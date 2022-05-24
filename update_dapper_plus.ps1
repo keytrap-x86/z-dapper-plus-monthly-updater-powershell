@@ -15,7 +15,7 @@ $packageVersion = $result.versions[$result.versions.Count -1]
 
 $packagePath = "$basePath\$packageName.$packageVersion\lib\net6.0\$packageName.dll"
 Write-Host "Copyinge $packagePath to $basePath"
-# Copy and overwrite the olad Z.Dapper.Plus.dll
+# Copy and overwrite the old Z.Dapper.Plus.dll
 Copy-Item -Path $packagePath -Destination "$basePath\$packageName.dll" -Force
 
 Stop-Transcript
